@@ -1,30 +1,50 @@
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class MapPractice {
   public static void main(String[] args) {
-    // Create a HashMap with String keys and Integer values and
-    // assign it to a variable of type Map
+    // Create a HashMap with String keys and Integer values
+    Map<String, Integer> map = new HashMap<>();
 
-    // Put 3 different key/value pairs in the Map
-    // (it's OK to do this one-by-one)
+    // Add 3 key/value pairs to the Map
+    map.put("Alice", 25);
+    map.put("Bob", 30);
+    map.put("Charlie", 35);
 
-    // Get the value associated with a given key in the Map
+    // Get the value for the key "Alice"
+    System.out.println("Alice's age: " + map.get("Alice"));
 
-    // Find the size (number of key/value pairs) of the Map
+    // Find the size of the Map
+    System.out.println("Number of entries in the Map: " + map.size());
 
-    // Replace the value associated with a given key (the size of the Map shoukld not change)
+    // Replace Bob's age
+    map.put("Bob", 40);
+    System.out.println("Bob's new age: " + map.get("Bob"));
 
-    // Check whether the Map contains a given key
+    // Check if the Map contains the key "Charlie"
+    System.out.println("Map contains Charlie: " + map.containsKey("Charlie"));
 
-    // Check whether the Map contains a given value
+    // Check if the Map contains the value 40
+    System.out.println("Map contains age 40: " + map.containsValue(40));
 
-    // Iterate over the keys of the Map, printing each key
+    // Print all keys
+    System.out.println("Keys in the Map:");
+    for (String key : map.keySet()) {
+      System.out.println(key);
+    }
 
-    // Iterate over the values of the map, printing each value
+    // Print all values
+    System.out.println("Values in the Map:");
+    for (Integer value : map.values()) {
+      System.out.println(value);
+    }
 
-    // Iterate over the entries in the map, printing each key and value
-
-    /*
+    // Print all key/value pairs
+    System.out.println("Entries in the Map:");
+    for (Map.Entry<String, Integer> entry : map.entrySet()) {
+      System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+    }
+   /*
      * Usage tip!
      * 
      * Maps are great when you want a specific key to value mapping.
