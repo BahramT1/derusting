@@ -1,9 +1,14 @@
+import java.util.Arrays;
 public class ArrayPractice {
   public static void main(String[] args) {
     // Create an array of Strings of size 4
+    String[] arr = {"bahram", "Ibrahim", "Kamran", "Asif"};
+    System.out.println(Arrays.toString(arr));
 
     // Set the value of the array at each index to be a different String
     // It's OK to do this one-by-one
+
+    
 
     // Get the value of the array at index 2
 
